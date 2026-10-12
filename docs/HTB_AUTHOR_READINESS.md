@@ -11,6 +11,8 @@ This public student project is a **Sherlock candidate**. It is not presented as 
 - [x] CVE statement (none used)
 - [x] PII / PCI synthesis disclosure (none real)
 - [x] No malware, secrets or real-world targets
+- [x] Offline student quick-start, workbench, report template and answer sheet
+- [x] Spoiler-free reviewer handoff, evidence limits and reproducible analysis steps
 - [x] Additional synthetic benign background and mixed-signal fixtures (not native captures)
 - [ ] Genuine native log/capture artifacts with credible independently collected background
 - [ ] Full **private** instructor walkthrough with **screenshots demonstrating each answer**

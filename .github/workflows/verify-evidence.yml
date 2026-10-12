@@ -16,3 +16,5 @@ jobs:
         run: python3 tests/test_package.py
       - name: Validate cross-artifact scenario invariants
         run: python3 tests/test_case_logic.py
+      - name: Verify participant workbench and blank answer sheet
+        run: python3 tests/test_workbench.py

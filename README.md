@@ -15,6 +15,12 @@ A suspicious infrastructure change surfaces at fictional **Northbridge Systems**
 Determine **who/what/when/where/how/why**, separate facts from hypotheses, and deliver a defensible incident report supporting containment, recovery, and evidence preservation.
 
 ## Download
+- [START HERE — Quick-start guide](START_HERE.md) — installation-free, step-by-step analyst workflow.
+- [Immersive Scenario](docs/SCENARIO.md) — investigator assignment, background and competing hypotheses.
+- [Solver Playbook](docs/SOLVER_PLAYBOOK.md) — Ubuntu, Kali, Windows and macOS instructions.
+- [Answer Format & Confidence](docs/ANSWER_FORMAT.md) — consistent scoring and traceability.
+- [Examiner Handoff](docs/REVIEWER_HANDOFF.md) — what reviewers can run and what is still missing.
+- [Blank Analyst Report](templates/ANALYST_REPORT.md) / [Answer Sheet](templates/ANSWER_SHEET.csv) — investigation deliverables.
 - [Student Evidence Package](downloads/The-Silent-Network-Architect-Student.zip) -- self-contained training package (no solutions).
 - [Investigation Questions](questions/INVESTIGATION.md) -- 30 graduated challenges.
 - [Expert Correlation Review](questions/EXPERT_CORRELATION.md) -- 10 ungraded advanced evidence exercises.
@@ -54,8 +60,8 @@ docs/            case brief, chain of custody, grading guidance, ethics
 evidence/        normalized synthetic investigative exhibits
 manifest/        SHA256SUMS for evidence and export payload
 questions/       investigation instructions and 30 questions
-tools/           local checksum and evidence consistency verifier
-downloads/       student-only ZIP, ready for review
+tools/           standard-library analyst workbench and checksum verifier
+downloads/       self-contained student ZIP, no solutions\ntemplates/       blank analyst report and 30-answer worksheet
 ```
 
 ## Ethical and publication notice
