@@ -1,4 +1,10 @@
 # The Silent Network Architect
+
+> **BEACON OF THE EAGLE LLC — AUTHOR SEAL**  
+> **CENTINELL SUITE DEFENSE**  
+> Cybersecurity · Digital Forensics · Incident Response  
+> © 2026 Beacon of the Eagle LLC — [Corporate attribution](BEACON-OWNERSHIP.md)
+
 **Hack The Box Sherlock candidate | DFIR / Network Forensics | Target difficulty: Insane**
 
 > A network can appear healthy while its most important evidence is being deliberately silenced.
