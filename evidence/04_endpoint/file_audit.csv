@@ -1,0 +1,5 @@
+event_id,timestamp_utc,server,account,client_ip,path,operation,result,session_ref
+FILE-421,2026-10-06T01:32:03Z,NB-FS-01,j.reyes,10.42.10.44,\\\\NB-FS-01\\architecture\\inventory_readme.txt,read,success,OPS-701
+FILE-437,2026-10-06T02:07:31Z,NB-FS-01,svc-netops,10.42.10.25,\\\\NB-FS-01\\architecture\\northbridge_core_topology_2026Q3.txt,read,success,WIN-1012
+FILE-438,2026-10-06T02:07:43Z,NB-FS-01,svc-netops,10.42.10.25,\\\\NB-FS-01\\architecture\\partner_interconnects_2026Q3.csv,read,success,WIN-1012
+FILE-443,2026-10-06T02:17:54Z,NB-BKP-01,svc-backup,10.42.20.40,\\\\NB-BKP-01\\daily\\health.json,read,success,WIN-1003

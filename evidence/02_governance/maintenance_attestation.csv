@@ -1,0 +1,4 @@
+attestation_id,timestamp_utc,ticket_id,actor,hostname,approved_action,result,source
+MAINT-310,2026-10-06T01:43:08Z,CHG-2847,m.ellis,NB-NMS-01,dns_agent_patch,completed,signed_work_order
+MAINT-311,2026-10-06T01:46:18Z,CHG-2847,m.ellis,NB-NMS-01,agent_restart,completed,nms_agent_audit
+MAINT-312,2026-10-06T01:48:40Z,CHG-2847,m.ellis,NB-NMS-01,telemetry_healthcheck,completed,nms_agent_audit

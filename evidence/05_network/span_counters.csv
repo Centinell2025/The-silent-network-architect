@@ -1,0 +1,7 @@
+counter_id,timestamp_utc,switch,mirror_id,admin_state,packets_per_minute,linked_session,details
+SPAN-101,2026-10-06T02:03:00Z,NB-CORE-SW-02,SPAN-7,enabled,28700,,normal
+SPAN-102,2026-10-06T02:06:05Z,NB-CORE-SW-02,SPAN-7,disabled,0,CTRL-SESS-884,controller_push
+SPAN-103,2026-10-06T02:10:00Z,NB-CORE-SW-02,SPAN-7,disabled,0,CTRL-SESS-884,capture_off
+SPAN-104,2026-10-06T02:16:00Z,NB-CORE-SW-02,SPAN-7,disabled,0,CTRL-SESS-884,capture_off
+SPAN-105,2026-10-06T02:17:20Z,NB-CORE-SW-02,SPAN-7,enabled,28420,CTRL-SESS-884,controller_restore
+SPAN-106,2026-10-06T02:22:00Z,NB-CORE-SW-02,SPAN-7,enabled,28690,,normal

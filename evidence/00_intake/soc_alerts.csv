@@ -1,0 +1,4 @@
+alert_id,timestamp_utc,affected_asset,detection,severity,signal,analyst_status
+ALERT-0902,2026-10-06T01:47:00Z,NB-NMS-01,maintenance_agent_restart,info,Expected agent recycle inside CHG-2847,closed_expected
+ALERT-0918,2026-10-06T02:06:07Z,NB-EDGE-01,mirror_feed_anomaly,medium,SPAN-7 packet ingestion fell to zero; SIEM agent remained green,open_investigation
+ALERT-0920,2026-10-06T02:13:03Z,NB-EDGE-01,new_egress_pattern,medium,First observed HTTPS flow to documentation-net destination,open_investigation

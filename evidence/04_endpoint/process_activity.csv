@@ -1,0 +1,7 @@
+event_id,timestamp_utc,hostname,account,logon_id,process_guid,parent_guid,image,command_summary,activity
+PROC-1301,2026-10-06T01:46:18Z,NB-NMS-01,m.ellis,0x1A5,PG-100,PG-001,nms-agent.exe,restart --approved CHG-2847,approved_maintenance
+PROC-1308,2026-10-06T02:03:06Z,NB-JUMP-01,svc-netops,0x8AF,PG-220,PG-210,network-controller-client.exe,controller-session CTRL-SESS-884,privileged_config_access
+PROC-1311,2026-10-06T02:09:08Z,NB-JUMP-01,svc-netops,0x8AF,PG-222,PG-210,archive-util.exe,create C:\\ProgramData\\Northbridge\\cache\\network-audit-bundle.zip,archive_write
+PROC-1315,2026-10-06T02:12:47Z,NB-JUMP-01,svc-netops,0x8AF,PG-224,PG-210,telemetry-agent.exe,upload archive from cache to collector.telemetry-audit.example,outbound_upload
+PROC-1320,2026-10-06T02:16:04Z,NB-JUMP-01,svc-netops,0x8AF,PG-226,PG-210,task-scheduler.exe,register \\Northbridge\\NetworkHealthAudit,task_creation
+PROC-1322,2026-10-06T02:21:30Z,NB-JUMP-01,SYSTEM,0x0,PG-230,PG-050,health-audit.exe,periodic background health audit,task_execution

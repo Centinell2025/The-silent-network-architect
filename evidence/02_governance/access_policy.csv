@@ -1,0 +1,5 @@
+policy_id,principal,allowed_scope,interactive_logon,extra_requirement
+POL-CTRL-11,svc-netops,approved_controller_jobs_only,prohibited,ticket_approved_for_specific_asset_and_action
+POL-JMP-08,m.ellis,jump_host_for_approved_maintenance,allowed,privileged_session_record_required
+POL-FILE-15,svc-netops,network_controller_configs_only,prohibited,protected_FS_topology_access_not_allowed
+POL-NMS-04,m.ellis,NB-NMS-01_maintenance,allowed,approved_ticket_and_agent_audit

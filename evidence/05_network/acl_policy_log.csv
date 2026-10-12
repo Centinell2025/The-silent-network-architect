@@ -1,0 +1,4 @@
+edge_record_id,edge_local_time,device,rule_id,revision,source_ip,destination_ip,destination_port,decision,remark,operation
+EDGE-071,2026-10-06T02:05:40,NB-EDGE-01,ACL-EGRESS-24,REV-719,10.42.10.25,203.0.113.77,443,permit,CHG-2847,apply_exception
+EDGE-072,2026-10-06T02:14:19,NB-EDGE-01,ACL-EGRESS-24,REV-719,10.42.10.25,203.0.113.77,443,permit,CHG-2847,traffic_rule_match
+EDGE-073,2026-10-06T02:20:35,NB-EDGE-01,ACL-EGRESS-24,REV-720,10.42.10.25,203.0.113.77,443,deny,CHG-2847,restore_baseline

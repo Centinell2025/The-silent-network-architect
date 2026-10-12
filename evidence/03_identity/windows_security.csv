@@ -1,0 +1,7 @@
+event_id,timestamp_utc,hostname,win_event_id,account,logon_type,src_ip,logon_id,details
+WIN-1001,2026-10-06T01:46:05Z,NB-NMS-01,4624,m.ellis,3,10.42.10.44,0x1A5,Approved remote maintenance connection
+WIN-1003,2026-10-06T01:49:00Z,NB-BKP-01,4624,svc-backup,5,-,0x3B1,Routine service start
+WIN-1009,2026-10-06T02:02:13Z,NB-JUMP-01,4624,svc-netops,10,10.42.10.77,0x8AF,RemoteInteractive session; policy prohibits service login
+WIN-1012,2026-10-06T02:06:51Z,NB-FS-01,4624,svc-netops,3,10.42.10.25,0x90B,Network share access
+WIN-1017,2026-10-06T02:16:04Z,NB-JUMP-01,4698,svc-netops,-,10.42.10.25,0x8AF,Task registered: \\Northbridge\\NetworkHealthAudit
+WIN-1021,2026-10-06T02:20:40Z,NB-JUMP-01,1102,svc-netops,-,-,0x8AF,Windows Security audit log cleared

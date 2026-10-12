@@ -1,0 +1,4 @@
+ticket_id,approved,window_start_utc,window_end_utc,authorized_asset,authorized_actions,requestor,approver,notes
+CHG-2847,yes,2026-10-06T01:40:00Z,2026-10-06T02:25:00Z,NB-NMS-01,dns_agent_patch;agent_restart;telemetry_healthcheck,m.ellis,s.kato,"No authorization for ACL edits, SPAN changes, jump tasks or protected file reads"
+CHG-2861,no,2026-10-06T02:00:00Z,2026-10-06T02:40:00Z,NB-EDGE-01,temporary_egress_exception,svc-netops,,Pending security review; cannot be executed
+CHG-2818,yes,2026-10-05T21:00:00Z,2026-10-05T21:20:00Z,NB-BKP-01,backup_healthcheck,j.reyes,s.kato,Unrelated closed ticket

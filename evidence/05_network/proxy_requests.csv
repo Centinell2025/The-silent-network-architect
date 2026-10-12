@@ -1,0 +1,3 @@
+request_id,timestamp_utc,src_ip,method,url_host,path,dst_ip,http_status,bytes_out,sha256_claim,ticket_tag
+PROXY-9098,2026-10-06T01:48:42Z,10.42.30.12,POST,health.status-sync.example,/v1/health,198.51.100.28,200,512,,CHG-2847
+PROXY-9113,2026-10-06T02:12:48Z,10.42.10.25,POST,collector.telemetry-audit.example,/v1/ingest,203.0.113.77,201,1133,ef0417f692fe25b39282ebcce4642d0b161a039f14fc7a0866654e3dd7ca7dcc,CHG-2847

@@ -1,0 +1,5 @@
+vlan,cidr,purpose,policy
+110,10.42.10.0/24,workstations_and_jump,privileged_access_monitored
+120,10.42.20.0/24,servers,restricted_file_read
+130,10.42.30.0/24,monitoring_and_control,segregated_control_plane
+199,10.42.0.0/24,network_transit,config_change_approval_required

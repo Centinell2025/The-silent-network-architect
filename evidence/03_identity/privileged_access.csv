@@ -1,0 +1,3 @@
+session_id,timestamp_utc,target,source,src_ip,principal,method,auth_result,linked_logon_id
+CTRL-SESS-712,2026-10-06T01:44:00Z,NB-NMS-01,NB-WS-11,10.42.10.44,m.ellis,pam_ssh,allow,0x1A5
+CTRL-SESS-884,2026-10-06T02:03:02Z,NB-NET-CTRL,NB-JUMP-01,10.42.10.25,svc-netops,delegated_api_token,allow,0x8AF

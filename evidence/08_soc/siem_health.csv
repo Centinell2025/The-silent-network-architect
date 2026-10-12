@@ -1,0 +1,6 @@
+health_id,timestamp_utc,hostname,agent_heartbeat,pipeline_status,mirrored_ingest_packets,source
+HEALTH-303,2026-10-06T02:03:00Z,NB-SIEM-01,OK,green,28700,endpoint_telemetry_agent
+HEALTH-306,2026-10-06T02:07:00Z,NB-SIEM-01,OK,green,0,endpoint_telemetry_agent
+HEALTH-311,2026-10-06T02:12:00Z,NB-SIEM-01,OK,green,0,endpoint_telemetry_agent
+HEALTH-317,2026-10-06T02:16:00Z,NB-SIEM-01,OK,green,0,endpoint_telemetry_agent
+HEALTH-322,2026-10-06T02:22:00Z,NB-SIEM-01,OK,green,28690,endpoint_telemetry_agent

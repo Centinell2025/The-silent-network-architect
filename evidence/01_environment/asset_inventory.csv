@@ -1,0 +1,12 @@
+asset_id,hostname,ip,role,owner_group,tier
+AS-001,NB-DC-01,10.42.10.10,directory,identity,critical
+AS-002,NB-JUMP-01,10.42.10.25,privileged_access_jump,network_ops,critical
+AS-003,NB-WS-22,10.42.10.77,shared_ops_workstation,network_ops,standard
+AS-004,NB-FS-01,10.42.20.18,protected_file_server,it_architecture,critical
+AS-005,NB-BKP-01,10.42.20.40,backup_server,backup_ops,critical
+AS-006,NB-NMS-01,10.42.30.12,network_monitoring,network_ops,high
+AS-007,NB-NET-CTRL,10.42.30.15,network_configuration_controller,network_ops,critical
+AS-008,NB-SIEM-01,10.42.30.30,siem_capture,security_ops,critical
+AS-009,NB-EDGE-01,10.42.0.1,perimeter_firewall,network_ops,critical
+AS-010,NB-CORE-SW-02,10.42.0.14,core_switch,network_ops,critical
+AS-011,NB-WS-11,10.42.10.44,engineer_workstation,network_ops,standard

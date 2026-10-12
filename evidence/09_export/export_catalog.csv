@@ -1,0 +1,2 @@
+catalog_id,created_utc,host,filename,artifact_path,size_bytes,sha256,source_file_count,creator_logon_id
+CAT-003,2026-10-06T02:09:08Z,NB-JUMP-01,network-audit-bundle.zip,evidence/09_export/network-audit-bundle.zip,1133,ef0417f692fe25b39282ebcce4642d0b161a039f14fc7a0866654e3dd7ca7dcc,2,0x8AF

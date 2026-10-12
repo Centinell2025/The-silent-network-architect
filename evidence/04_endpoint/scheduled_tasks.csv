@@ -1,0 +1,4 @@
+task_event_id,timestamp_utc,hostname,task_name,operation,principal,run_as,image_path,schedule,status
+TASK-900,2026-10-05T23:10:00Z,NB-NMS-01,\\Northbridge\\NightlyAgentHealth,run,SYSTEM,SYSTEM,C:\\Program Files\\Northbridge\\nms-agent.exe,nightly,success
+TASK-914,2026-10-06T02:16:04Z,NB-JUMP-01,\\Northbridge\\NetworkHealthAudit,create,svc-netops,SYSTEM,C:\\ProgramData\\Northbridge\\NetHealth\\health-audit.exe,every_15_minutes,registered
+TASK-919,2026-10-06T02:21:30Z,NB-JUMP-01,\\Northbridge\\NetworkHealthAudit,run,SYSTEM,SYSTEM,C:\\ProgramData\\Northbridge\\NetHealth\\health-audit.exe,every_15_minutes,completed

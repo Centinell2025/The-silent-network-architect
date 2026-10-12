@@ -1,0 +1,6 @@
+event_id,timestamp_utc,device,session_id,principal,operation,target,config_revision,ticket_label,source_host,result
+CTRL-700,2026-10-06T01:48:36Z,NB-NET-CTRL,CTRL-SESS-712,m.ellis,read_only_status,NB-NMS-01,REV-718,CHG-2847,NB-WS-11,success
+CTRL-716,2026-10-06T02:04:10Z,NB-NET-CTRL,CTRL-SESS-884,svc-netops,set_egress_exception,NB-EDGE-01/ACL-EGRESS-24,REV-719,CHG-2847,NB-JUMP-01,success
+CTRL-721,2026-10-06T02:06:05Z,NB-NET-CTRL,CTRL-SESS-884,svc-netops,disable_mirror,NB-CORE-SW-02/SPAN-7,REV-719,CHG-2847,NB-JUMP-01,success
+CTRL-752,2026-10-06T02:17:20Z,NB-NET-CTRL,CTRL-SESS-884,svc-netops,enable_mirror,NB-CORE-SW-02/SPAN-7,REV-719,CHG-2847,NB-JUMP-01,success
+CTRL-758,2026-10-06T02:19:05Z,NB-NET-CTRL,CTRL-SESS-884,svc-netops,restore_egress_baseline,NB-EDGE-01/ACL-EGRESS-24,REV-720,CHG-2847,NB-JUMP-01,success

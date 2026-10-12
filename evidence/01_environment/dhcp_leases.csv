@@ -1,0 +1,3 @@
+lease_id,valid_from_utc,valid_to_utc,ip,hostname,device_identifier,seat_type
+LEASE-2801,2026-10-05T22:00:00Z,2026-10-07T22:00:00Z,10.42.10.77,NB-WS-22,02:00:00:42:10:77,shared_ops_seat
+LEASE-2802,2026-10-05T22:00:00Z,2026-10-07T22:00:00Z,10.42.10.44,NB-WS-11,02:00:00:42:10:44,assigned_engineer

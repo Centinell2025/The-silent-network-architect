@@ -1,0 +1,4 @@
+snapshot_id,timestamp_utc,device,rule_id,revision,outbound_target,action,comment
+SNAP-718,2026-10-06T02:03:55Z,NB-EDGE-01,ACL-EGRESS-24,REV-718,203.0.113.77:443,deny,baseline
+SNAP-719,2026-10-06T02:04:10Z,NB-EDGE-01,ACL-EGRESS-24,REV-719,203.0.113.77:443,permit,CHG-2847
+SNAP-720,2026-10-06T02:19:05Z,NB-EDGE-01,ACL-EGRESS-24,REV-720,203.0.113.77:443,deny,restored
