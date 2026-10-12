@@ -4,8 +4,8 @@
 Use exact UTC timestamps, filenames, session IDs, rule IDs and SHA-256 values. Cite record IDs / file paths for every response. **For consequential conclusions, corroborate with two independent evidence sources.** Do not infer a person's identity from account credentials alone.
 
 ## Phase I -- Establish what can be trusted (WHAT / WHERE / WHEN)
-1. [Q01] Which precise device did the initial SOC alert name as the affected network control-plane asset?
-2. [Q02] At what exact UTC time did the SOC alert fire?
+1. [Q01] Which device did the medium-severity `mirror_feed_anomaly` alert name as its affected asset?
+2. [Q02] At what exact UTC time did that `mirror_feed_anomaly` alert fire?
 3. [Q03] Which approved change ticket is cited in the suspicious network-controller remarks?
 4. [Q04] Which asset is permitted by that approved ticket's *authorized_asset* field?
 5. [Q05] Which ticket covering an edge-rule exception is explicitly not approved, despite time overlap?
@@ -26,7 +26,7 @@ Use exact UTC timestamps, filenames, session IDs, rule IDs and SHA-256 values. C
 16. [Q16] Which `mirror_id` was administratively disabled on the core switch?
 17. [Q17] What is the exact UTC timestamp at which its collection was restored?
 18. [Q18] How many seconds elapsed between disable and restoration?
-19. [Q19] What health value did the SIEM agent report *while* SPAN counters were zero, illustrating why green health was misleading?
+19. [Q19] What exact `agent_heartbeat` value did NB-SIEM-01 report *while* SPAN counters were zero, illustrating why green status was misleading?
 
 ## Phase IV -- Prove or disprove the data-loss allegation (WHAT / WHERE / HOW)
 20. [Q20] Which **two exact filenames** in the file-audit trail were read from the protected server before packaging? List them alphabetically separated by a semicolon.
