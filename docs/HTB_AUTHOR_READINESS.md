@@ -17,6 +17,7 @@ This public student project is a **Sherlock candidate**. It is not presented as 
 - [ ] Genuine native log/capture artifacts with credible independently collected background
 - [ ] Full **private** instructor walkthrough with **screenshots demonstrating each answer**
 - [ ] External blind-solve calibration at the requested Insane difficulty
+- [x] Provided provisional exact-answer replacement option for Q25-Q30
 - [ ] Reviewer-confirmed format for Q25-Q30 (six open-ended questions)
 - [ ] Staff review, platform acceptance and statement of work
 

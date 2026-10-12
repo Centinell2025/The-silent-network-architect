@@ -20,9 +20,11 @@ Determine **who/what/when/where/how/why**, separate facts from hypotheses, and d
 - [Solver Playbook](docs/SOLVER_PLAYBOOK.md) — Ubuntu, Kali, Windows and macOS instructions.
 - [Answer Format & Confidence](docs/ANSWER_FORMAT.md) — consistent scoring and traceability.
 - [Examiner Handoff](docs/REVIEWER_HANDOFF.md) — what reviewers can run and what is still missing.
+- [Grader Handoff](docs/GRADER_HANDOFF.md) — deterministic answer and ambiguity checks.
 - [Blank Analyst Report](templates/ANALYST_REPORT.md) / [Answer Sheet](templates/ANSWER_SHEET.csv) — investigation deliverables.
 - [Student Evidence Package](downloads/The-Silent-Network-Architect-Student.zip) -- self-contained training package (no solutions).
 - [Investigation Questions](questions/INVESTIGATION.md) -- 30 graduated challenges.
+- [Optional Exact-Answer Grading](questions/STATIC_GRADING_CANDIDATE.md) -- six provisional auto-grading replacements for reviewer selection.
 - [Expert Correlation Review](questions/EXPERT_CORRELATION.md) -- 10 ungraded advanced evidence exercises.
 - [Case Brief](docs/CASE_BRIEF.md) -- initial SOC handoff.
 - [Evidence Guide](docs/EVIDENCE_GUIDE.md) -- source descriptions, uncertainty and normalization.

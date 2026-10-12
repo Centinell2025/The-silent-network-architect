@@ -41,3 +41,6 @@ Official requirements: https://help.hackthebox.com/en/articles/8463668-sherlocks
 
 ### IP and reviewer coordination
 This repository's author credit is not a transfer of intellectual property. If submission terms prohibit public source distribution before review, agree the required visibility and private delivery mechanism before submitting. Do not put instructor answers in the public repository.
+
+## Reviewer selection: grading format
+The primary 30-question case contains six narrative tasks. If the deployment requires exact answers for all 30, use the six non-spoiler alternatives in `questions/STATIC_GRADING_CANDIDATE.md`, and read `docs/GRADER_HANDOFF.md` before agreeing on a grading contract. The alternate has **not** been selected or accepted by HTB staff.
