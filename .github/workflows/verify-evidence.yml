@@ -1,0 +1,16 @@
+name: Verify Sherlock evidence
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  forensic-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check evidence and cryptographic manifest
+        run: python3 tools/validate_evidence.py
+      - name: Check ZIP parity and solution isolation
+        run: python3 tests/test_package.py
