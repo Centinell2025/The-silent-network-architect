@@ -14,3 +14,5 @@ jobs:
         run: python3 tools/validate_evidence.py
       - name: Check ZIP parity and solution isolation
         run: python3 tests/test_package.py
+      - name: Validate cross-artifact scenario invariants
+        run: python3 tests/test_case_logic.py

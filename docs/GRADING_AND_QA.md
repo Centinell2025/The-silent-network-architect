@@ -23,3 +23,7 @@
 
 ## Review caveat
 Technical rigor is designed to support high difficulty; **Insane** classification is a target, not an independently validated acceptance result.
+
+## Extended regression coverage
+- See `tests/test_case_logic.py` for non-spoiler clock, authorization, identity, transfer and background-data consistency checks.
+- `questions/EXPERT_CORRELATION.md` provides optional high-complexity analyst exercises; these do not replace the 30 platform questions or a screenshot-backed private write-up.

@@ -35,4 +35,4 @@ with zipfile.ZipFile(PACK) as z:
     with zipfile.ZipFile(z.open("evidence/09_export/network-audit-bundle.zip")) as inner:
         assert inner.testzip() is None
         assert len(inner.namelist()) == 2
-print("PASS: student ZIP CRC, 30 question references, 38 package/source byte matches and solution isolation")
+print(f"PASS: student ZIP CRC, 30 questions, {len(names)} package/source byte matches and solution isolation")

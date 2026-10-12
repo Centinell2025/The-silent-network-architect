@@ -10,7 +10,7 @@ All systems, applications, principals and user handles are fictitious. Product-l
 | NB-DC-01 | Windows Server directory controller | Active Directory-like authentication audit, internal DNS | Account/session and domain resolution context |
 | NB-FS-01 | Windows file server | SMB service, file auditing | Architectural documents requiring privileged read approval |
 | NB-BKP-01 | Windows or Linux backup appliance | Backup service and backup monitoring | Routine background operations |
-| NB-NMS-01 | Linux network monitor | nms-agent.exe (fictional process label), health telemetry, scheduled maintenance | Approved engineering change target |
+| NB-NMS-01 | Windows Server monitoring host (simulated) | nms-agent.exe, Windows Security authentication, health telemetry, scheduled maintenance | Approved engineering change target |
 | NB-NET-CTRL | Linux-based controller appliance | Privileged access API and config revision audit | Network ACL and mirror management |
 | NB-EDGE-01 | Network firewall appliance | ACL-EGRESS-24, local system clock, NTP telemetry | Egress control and device-local timestamps |
 | NB-CORE-SW-02 | Managed switch | SPAN-7 admin counters | Sensor traffic mirroring |

@@ -17,8 +17,11 @@ Determine **who/what/when/where/how/why**, separate facts from hypotheses, and d
 ## Download
 - [Student Evidence Package](downloads/The-Silent-Network-Architect-Student.zip) -- self-contained training package (no solutions).
 - [Investigation Questions](questions/INVESTIGATION.md) -- 30 graduated challenges.
+- [Expert Correlation Review](questions/EXPERT_CORRELATION.md) -- 10 ungraded advanced evidence exercises.
 - [Case Brief](docs/CASE_BRIEF.md) -- initial SOC handoff.
 - [Evidence Guide](docs/EVIDENCE_GUIDE.md) -- source descriptions, uncertainty and normalization.
+- [Mixed-signal Provenance](docs/BACKGROUND_DATA_PROVENANCE.md) -- realistic-looking, explicitly synthetic background evidence.
+- [Quality Acceptance Plan](docs/QUALITY_ACCEPTANCE_PLAN.md) -- remaining steps before an Insane submission.
 - [Network Architecture Diagram](docs/NETWORK_ARCHITECTURE.md) -- multi-host map and trust boundaries.
 - [Hosts, Services and Accounts](docs/HOSTS_SERVICES_AND_IDENTITIES.md) -- OS, processes and identities.
 - [CVE, PII/PCI and Evidence Provenance](docs/CVE_PII_AND_EVIDENCE_PROVENANCE.md) -- data-generation disclosures.
@@ -40,6 +43,7 @@ Determine **who/what/when/where/how/why**, separate facts from hypotheses, and d
 
 ## Design features
 - Windows Security and process records, controller audit, switch SPAN counters, firewall/NTP telemetry, DNS, flow and proxy evidence, service-ticket policy, storage receipt, SIEM health and a file-export package.
+- Supplemental Zeek-format connections, endpoint activity and firewall-style syslog, containing background noise and cross-source checkpoints (simulated, **not native captures**).
 - Multi-hop session correlation, time-offset reconstruction, scope and authorization analysis, data-exfiltration proof, persistence, anti-forensics, false-positive elimination and confidence-scoped attribution.
 - Answers must reference primary artifacts and **two independent sources** for consequential conclusions.
 - Some facts can be proven; the actor's human identity **cannot** be established from the provided data.

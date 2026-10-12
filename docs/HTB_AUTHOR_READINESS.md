@@ -11,7 +11,8 @@ This public student project is a **Sherlock candidate**. It is not presented as 
 - [x] CVE statement (none used)
 - [x] PII / PCI synthesis disclosure (none real)
 - [x] No malware, secrets or real-world targets
-- [ ] Genuine native log/capture artifacts with substantial credible benign background
+- [x] Additional synthetic benign background and mixed-signal fixtures (not native captures)
+- [ ] Genuine native log/capture artifacts with credible independently collected background
 - [ ] Full **private** instructor walkthrough with **screenshots demonstrating each answer**
 - [ ] External blind-solve calibration at the requested Insane difficulty
 - [ ] Reviewer-confirmed format for Q25-Q30 (six open-ended questions)
