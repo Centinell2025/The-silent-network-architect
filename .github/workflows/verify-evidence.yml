@@ -18,3 +18,5 @@ jobs:
         run: python3 tests/test_case_logic.py
       - name: Verify participant workbench and blank answer sheet
         run: python3 tests/test_workbench.py
+      - name: Verify exact-answer alternative questions
+        run: python3 tests/test_grading_handout.py
