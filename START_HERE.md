@@ -5,7 +5,7 @@
 ## Your mission
 Investigate case **NB-IR-2026-104** and deliver a defensible determination of whether an authorized network maintenance change explains the loss of visibility, or whether multiple systems were affected by an unauthorized operation. Avoid jumping to attribution or intent.
 
-**Your inputs**: 30 staged questions, fictional network and endpoint evidence, a minimal sample export ZIP, a diagram, background traffic, and a SHA-256 manifest. **Your outputs**: answers and cited evidence, a normalized UTC timeline, and an incident report separating verified facts from inference. No real targets, malware, VM setup, proprietary tooling, Internet access or credentials are required.
+**Your inputs**: 30 exact-answer forensic questions, fictional network and endpoint evidence, a minimal sample export ZIP, a diagram, background traffic, and a SHA-256 manifest. **Your outputs**: answers and cited evidence, a normalized UTC timeline, and an incident report separating verified facts from inference. No real targets, malware, VM setup, proprietary tooling, Internet access or credentials are required.
 
 ## Start in five minutes
 1. Download and extract `downloads/The-Silent-Network-Architect-Student.zip`, keeping the original archive untouched.

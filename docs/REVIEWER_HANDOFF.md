@@ -35,7 +35,7 @@ All logs are *modeled synthetic telemetry*. The Zeek-format traffic is **not** a
 - The student ZIP should open successfully and match repository evidence exactly.
 
 ## Honest open issues before official submission
-HTB requires a **full intended investigation write-up with screenshots showing how to answer every question**; that deliverable still needs to be produced from actual analysis and privately delivered. To justify Insane, build more genuine multi-OS source artifacts and run independent blind solves; more synthetic noise alone is insufficient. Q25-Q30 narrative prompts may need exact-format replacement if the target grader supports only static answers.
+HTB requires a **full intended investigation write-up with screenshots showing how to answer every question**; that deliverable still needs to be produced from actual analysis and privately delivered. To justify Insane, build more genuine multi-OS source artifacts and run independent blind solves; more synthetic noise alone is insufficient. All 30 questions are now exact-value prompts, but their difficulty and deterministic solutions require independent examiner verification.
 
 Official requirements: https://help.hackthebox.com/en/articles/8463668-sherlocks-submission-requirements
 
@@ -43,4 +43,4 @@ Official requirements: https://help.hackthebox.com/en/articles/8463668-sherlocks
 This repository's author credit is not a transfer of intellectual property. If submission terms prohibit public source distribution before review, agree the required visibility and private delivery mechanism before submitting. Do not put instructor answers in the public repository.
 
 ## Reviewer selection: grading format
-The primary 30-question case contains six narrative tasks. If the deployment requires exact answers for all 30, use the six non-spoiler alternatives in `questions/STATIC_GRADING_CANDIDATE.md`, and read `docs/GRADER_HANDOFF.md` before agreeing on a grading contract. The alternate has **not** been selected or accepted by HTB staff.
+The current case has 30 canonical exact-answer questions in `questions/INVESTIGATION.md`; the six-question grading alternative was retired to remove ambiguity. The non-graded analyst conclusion remains mandatory educational practice. Read `docs/GRADER_HANDOFF.md` before accepting a grading configuration.

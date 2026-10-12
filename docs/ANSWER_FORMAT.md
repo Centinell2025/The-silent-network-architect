@@ -1,28 +1,21 @@
-# Answer format and evidence standard
+# Candidate answer format and evidence standard
 
-Questions Q01-Q24 expect **one exact value or a specified pair of values**. Q25-Q30 expect reasoned explanations with citations and a bounded confidence judgment. These formats are author guidance and are not claimed to be HTB's final grading configuration.
+All 30 graded questions in `questions/INVESTIGATION.md` have an exact output format; additional professional analysis is ungraded by default. These are **author conventions**, subject to reviewer approval.
 
-| Answer type | Format | Avoid |
-|---|---|---|
-| Timestamp | `YYYY-MM-DDTHH:MM:SSZ` exactly UTC | Local device time without calibration |
-| Seconds | Non-negative base-10 integer | Phrases like "around ten minutes" |
-| Account, hostname, ticket, rule, revision, object or session | Exact case-sensitive literal from artifact | Nicknames or guessed extensions |
-| SHA-256 | 64 lowercase hex digits | Partial hash, SHA-1 or spaces |
-| Two filenames | Alphabetical filenames separated by a single semicolon | Full UNC paths and unsupported guesses |
-| Network destination | IPv4 literal printed in evidence | Hostname instead of requested IP |
-| HTTP response | 3-digit status integer | "Success" |
-| Interpretation | Supported claim → exact source IDs → alternative → limitation → confidence | Overclaiming actor identity |
+| Requested type | Output |
+|---|---|
+| Event time | `YYYY-MM-DDTHH:MM:SSZ` (UTC, zero milliseconds) |
+| Whole seconds or bytes | Decimal integer with **no** commas or unit suffix |
+| IDs, hostnames, accounts, SHA-256, IPs | Exact case and punctuation from source, 64 lowercase hex for SHA-256 |
+| Two filenames | Alphabetical basenames joined by one semicolon, no space |
+| HTTP response | Three-digit numeric string |
+| Qualitative report | Claim → primary source file:row → corroboration → alternative → confidence and limitation |
 
-## Evidence citations
-Example **format only** (not a case solution):
-`evidence/01_environment/asset_inventory.csv :: row AS-000 :: hostname field`.
+## Submission worksheet
+Fill `templates/ANSWER_SHEET.csv` with an answer and cited source line IDs for each Q01–Q30. Record an offset calculation where relevant. Exact outputs are important for automated grading, but **evidence** is important for the instructor assessment.
 
-A meaningful conclusion should refer to different source families (e.g. source-governance plus device-audit; network telemetry plus endpoint behavior), not two duplicate rows of the same generated file.
+## Confidence
+High: independent modeled sources with consistent fields/times; Moderate: corroboration incomplete; Low: weak inference; Unsupported: absent from evidence. These levels are a training convention, not a professional certification.
 
-## Confidence labels
-- **High (within the simulation):** corroborated observations from at least two distinct modeled systems with compatible times and values.
-- **Moderate:** one strong observation with partial corroboration or a plausible unresolved alternative.
-- **Low:** inference or ambiguous record with missing corroboration.
-- **Unsupported:** theory not established by available evidence.
-
-No score, external accreditation or real-world forensic authenticity is implied by these labels.
+## Attribution
+The evidence can link a service account to a logon, a jump host and controller actions. It **cannot** determine a real human's identity from a shared workstation and logs.

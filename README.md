@@ -23,8 +23,8 @@ Determine **who/what/when/where/how/why**, separate facts from hypotheses, and d
 - [Grader Handoff](docs/GRADER_HANDOFF.md) — deterministic answer and ambiguity checks.
 - [Blank Analyst Report](templates/ANALYST_REPORT.md) / [Answer Sheet](templates/ANSWER_SHEET.csv) — investigation deliverables.
 - [Student Evidence Package](downloads/The-Silent-Network-Architect-Student.zip) -- self-contained training package (no solutions).
-- [Investigation Questions](questions/INVESTIGATION.md) -- 30 graduated challenges.
-- [Optional Exact-Answer Grading](questions/STATIC_GRADING_CANDIDATE.md) -- six provisional auto-grading replacements for reviewer selection.
+- [Investigation Questions](questions/INVESTIGATION.md) -- 30 correlated exact-answer investigations.
+- [Canonical Grading Guide](docs/GRADER_HANDOFF.md) -- one set of 30 exact-answer questions and reviewer quality controls.
 - [Expert Correlation Review](questions/EXPERT_CORRELATION.md) -- 10 ungraded advanced evidence exercises.
 - [Case Brief](docs/CASE_BRIEF.md) -- initial SOC handoff.
 - [Evidence Guide](docs/EVIDENCE_GUIDE.md) -- source descriptions, uncertainty and normalization.
@@ -47,7 +47,7 @@ Determine **who/what/when/where/how/why**, separate facts from hypotheses, and d
 | Investigation time | Not benchmarked; difficulty subject to blind testing |
 | Scenario | Fully fabricated Northbridge Systems |
 | Evidence | Multi-source synthetic records, export payload, cryptographic manifest |
-| Grading | 24 precise-response questions + 6 investigative reasoning tasks |
+| Grading | 30 exact-answer questions + expert report (ungraded) |
 
 ## Design features
 - Windows Security and process records, controller audit, switch SPAN counters, firewall/NTP telemetry, DNS, flow and proxy evidence, service-ticket policy, storage receipt, SIEM health and a file-export package.

@@ -1,47 +1,59 @@
-# Analyst Investigation -- The Silent Network Architect
-**Case:** NB-IR-2026-104  **Target level:** Insane
+# The Silent Network Architect — Investigator Questions
+**Case:** NB-IR-2026-104 | **Difficulty design target:** Insane (not calibrated or HTB-approved)
 
-Use exact UTC timestamps, filenames, session IDs, rule IDs and SHA-256 values. Cite record IDs / file paths for every response. **For consequential conclusions, corroborate with two independent evidence sources.** Do not infer a person's identity from account credentials alone.
+## Your assignment
+Northbridge Systems is a **fictional** organization. Determine whether the interruption of network monitoring was an authorized maintenance effect or part of an unauthorized operation. You must demonstrate **how** your answers follow from evidence. Only explicitly supported claims receive credit.
 
-## Phase I -- Establish what can be trusted (WHAT / WHERE / WHEN)
-1. [Q01] Which device did the medium-severity `mirror_feed_anomaly` alert name as its affected asset?
-2. [Q02] At what exact UTC time did that `mirror_feed_anomaly` alert fire?
-3. [Q03] Which approved change ticket is cited in the suspicious network-controller remarks?
-4. [Q04] Which asset is permitted by that approved ticket's *authorized_asset* field?
-5. [Q05] Which ticket covering an edge-rule exception is explicitly not approved, despite time overlap?
-6. [Q06] What device clock offset (in **seconds ahead of UTC**) must be used to interpret the edge firewall records?
-7. [Q07] At what **corrected UTC time** was the unauthorized edge ACL revision applied?
+This is a **30-question, exact-answer** version suitable for examiner review. Each question asks for a uniquely specified value. The investigative method itself is the challenge: timeline reconstruction, bounded device clock correction, authorization beyond ticket labels, multi-hop identity correlation, separating routine from suspect telemetry, sample-archive integrity, and persistence after restoration.
 
-## Phase II -- Trace access and control (WHO / HOW)
-8. [Q08] Which account performed the first suspicious interactive authentication on the jump host?
-9. [Q09] Which source IP initiated that interactive session?
-10. [Q10] What exact Windows logon type identifies its interactive remote character?
-11. [Q11] Which Windows `logon_id` links that login to later endpoint process activity?
-12. [Q12] Which asset hostname did the DHCP inventory associate with the suspicious source IP?
-13. [Q13] Which privileged-access `session_id` then connects the jump host to the network controller?
-14. [Q14] Which `rule_id` was modified to allow the suspicious outbound network path?
-15. [Q15] Which `config_revision` first applied that modification?
+**Mandatory evidence standard:** For each answer, include the requested literal plus supporting file/row IDs in your private worksheet. Use at least two *different source families* wherever possible; a repeated log extract is not independent corroboration. All timestamps must be **UTC**, `YYYY-MM-DDTHH:MM:SSZ`. When asked for seconds or byte counts, answer in base-10 integer form with no units. Use exact case, punctuation and leading zeroes for identifiers. Answer only from the supplied material.
 
-## Phase III -- Reconstruct the blind spot (WHY / WHEN)
-16. [Q16] Which `mirror_id` was administratively disabled on the core switch?
-17. [Q17] What is the exact UTC timestamp at which its collection was restored?
-18. [Q18] How many seconds elapsed between disable and restoration?
-19. [Q19] What exact `agent_heartbeat` value did NB-SIEM-01 report *while* SPAN counters were zero, illustrating why green status was misleading?
+### Phase 1 — Approval boundary, identity and access (WHO / WHAT / WHY)
 
-## Phase IV -- Prove or disprove the data-loss allegation (WHAT / WHERE / HOW)
-20. [Q20] Which **two exact filenames** in the file-audit trail were read from the protected server before packaging? List them alphabetically separated by a semicolon.
-21. [Q21] What is the SHA-256 of the archived export present in `evidence/09_export/`?
-22. [Q22] What exact destination IP received the outbound transfer according to NetFlow?
-23. [Q23] What HTTP response status confirms that the proxy accepted the outbound upload operation?
-24. [Q24] Which `object_id` appears in the independent receiving-object receipt?
+1. **Q01 — Authority laundering.** Identify the **approved change ticket ID** that was reused as a label for a successful controller operation outside the ticket's permitted asset and action scope. Verify the original approval against a controller audit row.
+2. **Q02 — Shared privileged session.** Identify the **privileged session ID** linking the same service principal to both an edge firewall exception and disabling the mirrored network sensor, despite the permitted change scope.
+3. **Q03 — Policy-violating principal.** Identify the **account name** that both performed a remote-interactive jump-host login and authenticated the controller session, although service-account interactive access was disallowed.
+4. **Q04 — Shared device origin.** Determine the **hostname** bound by DHCP to the source IP of that prohibited remote-interactive login during the lease interval. Do **not** give a human name.
+5. **Q05 — Endpoint correlation key.** Give the **Windows logon_id** needed to join that remote-interactive logon to the later packaging/upload processes on the jump host.
+6. **Q06 — Unauthorized exception request.** Give the **ticket ID** of the edge exception request that was still unapproved when control-plane changes were applied.
 
-## Phase V -- Draw defensible conclusions (WHY / SO WHAT)
-25. [Q25] Why does the approved CHG label not authorize the controller, switch, file server or edge-rule actions? Cite exact ticket scope and audit operations.
-26. [Q26] Distinguish the normal NMS maintenance and its telemetry upload from the suspicious jump-host transfer. Identify exact differentiating sources and fields.
-27. [Q27] What evidence demonstrates an unauthorized *collection-and-transfer sequence*, rather than merely a large network flow? Address file reads, packaging, DNS, proxy, NetFlow and receiving receipt; distinguish observable fact from inferred motive.
-28. [Q28] Which scheduled task created later in the timeline represents potential persistence, and which subsequent log event indicates anti-forensic behavior? Explain what remains unverified.
-29. [Q29] What can and cannot be concluded about the human adversary from the observed service principal, jump-host session, source IP and DHCP lease?
-30. [Q30] Produce a five-step prioritized containment, evidence-preservation and recovery plan. Explain which controls must be revalidated even if the firewall rule and SPAN mirror were returned to their previous values.
+### Phase 2 — Controller and firewall clock reconstruction (WHERE / WHEN / HOW)
 
-## Required final conclusion
-A 250-400-word incident determination with **supported, unsupported and inconclusive** findings, three UTC milestones and at least four artifact references from distinct sources. Do not equate a plausible story with proof.
+7. **Q07 — Crossing the boundary.** Give the **destination IPv4 address** denied by the baseline edge policy, permitted in the temporary revision, and reached by the later suspicious upload flow.
+8. **Q08 — Configuration provenance.** Give the **first configuration revision ID** that permitted the destination in Q07, confirmed in both a controller event and the config snapshots.
+9. **Q09 — Normalize a device clock.** Give the **exact UTC time** that the exception was applied, derived from the edge device's local `apply_exception` time and the independently recorded clock offset; confirm the controller event time.
+10. **Q10 — Identify the traffic match.** Give the **edge_record_id** whose corrected local time falls inside the suspicious HTTPS NetFlow connection and whose 5-tuple endpoints match it.
+11. **Q11 — Precision correlation.** Give the **exact corrected UTC time** of the traffic match in Q10; show the offset calculation, not just the unsynchronized device string.
+
+### Phase 3 — Hidden monitoring blackout (WHAT / WHEN / WHY)
+
+12. **Q12 — Sensor blind spot.** Give the **mirror_id** whose administrative disable is supported by both controller audit and switch packet counters while the SIEM agent heartbeat remained healthy.
+13. **Q13 — Blackout start.** Give the **exact UTC disable timestamp** from the mirrored-switch transition, corroborated by a controller operation.
+14. **Q14 — Blackout end.** Give the **exact UTC restoration timestamp** from the enabled-switch transition, corroborated by controller audit.
+15. **Q15 — Quantify the gap.** Calculate the **total elapsed seconds** between the controller-supported disable and restore transitions. Do not use the later SOC alert as the start.
+16. **Q16 — Detection lag.** Calculate the **integer number of seconds** between the actual mirror disable and the first medium-severity mirror-feed SOC alert.
+17. **Q17 — Misleading health signal.** Give the exact **agent_heartbeat field value** recorded for NB-SIEM-01 during a zero-packet mirror-ingest observation, showing why endpoint health was an insufficient proxy for capture.
+
+### Phase 4 — Protected files and outbound transfer (HOW / WHERE / WHAT)
+
+18. **Q18 — Source of data.** Give the **two protected-file basenames** read by the controller-session principal and then found inside the export archive. Sort alphabetically and join with exactly one semicolon, without spaces.
+19. **Q19 — Bind archive to session.** Give the **catalog_id** for the archive produced on the jump host while capture was disabled and whose creator logon ID matches the suspicious endpoint process chain.
+20. **Q20 — Verify content, not a claim.** Calculate the **lowercase SHA-256** of the actual archived export file, and compare it to the catalog, proxy claim and receipt.
+21. **Q21 — Check claimed transfer size.** Give the exact **byte length** of the actual exported archive that matches the application-level upload/receipt records. Do not confuse it with TCP flow overhead.
+22. **Q22 — Correlate network tuple.** Give the **Zeek-format uid** for the connection whose origin IP/port and destination IP/port match the NetFlow upload; contrast it with the benign monitoring connection.
+23. **Q23 — Resolve the destination.** Give the exact **DNS queried hostname** whose answer and querying endpoint match that upload, recorded before the POST.
+24. **Q24 — Application identification.** Give the **proxy request_id** that jointly matches the network-flow endpoints, exported size, exported digest and subsequent receiving record.
+25. **Q25 — HTTP result.** Give the **three-digit HTTP response status** shared by that upload's proxy request and the correlated receiving-object audit.
+26. **Q26 — Receiving record.** Give the exact **object_id** of the receipt whose source/destination, content length and digest match the packaged archive.
+27. **Q27 — Receipt lag.** Calculate the **whole seconds** between the correlated proxy POST timestamp and the matching receiving-object timestamp.
+
+### Phase 5 — Persistence, cleanup and recovery boundary (WHAT / WHEN / SO WHAT)
+
+28. **Q28 — Persistence registration.** Give the **task_event_id** for the task registered under the service principal on the jump host, which later ran under SYSTEM after network-mirror restoration.
+29. **Q29 — Evidence cleanup.** Give the **Windows Security numeric Event ID** of the security audit log-clear event that followed the suspicious task registration.
+30. **Q30 — Restored network state.** Give the **revision ID** that re-established the edge rule's deny baseline after the suspicious transfer but before the observed log-clear event.
+
+## Required ungraded DFIR decision report
+Complete `templates/ANALYST_REPORT.md` and the additional exercises in `questions/EXPERT_CORRELATION.md`. Your report must answer **who/what/when/where/how/why**, distinguish proof from inference, explain the limits of synthetic evidence and human attribution, identify affected business functions, and propose prioritized containment, evidence preservation and recovery. The report tests expert judgment, but the 30 prompts above define the exact-answer candidate.
+
+**Research ethics:** Do not scan any host or contact any destination. All accounts, logs, IPs and infrastructure are synthetic. The true human actor and method of initial credential access remain unproven.

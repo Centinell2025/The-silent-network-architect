@@ -17,8 +17,8 @@ This public student project is a **Sherlock candidate**. It is not presented as 
 - [ ] Genuine native log/capture artifacts with credible independently collected background
 - [ ] Full **private** instructor walkthrough with **screenshots demonstrating each answer**
 - [ ] External blind-solve calibration at the requested Insane difficulty
-- [x] Provided provisional exact-answer replacement option for Q25-Q30
-- [ ] Reviewer-confirmed format for Q25-Q30 (six open-ended questions)
+- [x] Consolidated 30 canonical exact-answer questions with multi-source reasoning
+- [ ] HTB examiner confirmation of canonical grading for all 30 exact-answer prompts
 - [ ] Staff review, platform acceptance and statement of work
 
 Do not mistake documentation completion or a self-produced package for official acceptance.
