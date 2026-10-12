@@ -20,3 +20,5 @@ jobs:
         run: python3 tests/test_workbench.py
       - name: Verify exact-answer alternative questions
         run: python3 tests/test_grading_handout.py
+      - name: Guard repeatable student ZIP assembly
+        run: python3 tools/build_student_zip.py --check
