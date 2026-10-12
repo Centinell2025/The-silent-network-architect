@@ -14,11 +14,11 @@ jobs:
         run: python3 tools/validate_evidence.py
       - name: Check ZIP parity and solution isolation
         run: python3 tests/test_package.py
-      - name: Validate cross-artifact scenario invariants
+      - name: Validate non-spoiler cross-artifact invariants
         run: python3 tests/test_case_logic.py
       - name: Verify participant workbench and blank answer sheet
         run: python3 tests/test_workbench.py
-      - name: Verify exact-answer alternative questions
+      - name: Verify canonical 30-question grading consistency
         run: python3 tests/test_grading_handout.py
       - name: Guard repeatable student ZIP assembly
         run: python3 tools/build_student_zip.py --check
