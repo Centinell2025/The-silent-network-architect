@@ -25,7 +25,7 @@ with zipfile.ZipFile(PACK) as z:
     assert not any(re.search(r"(answer.?key|instructor.?solution|walkthrough)", n, re.I)
                    for n in names), "Instructor solution accidentally public"
     questions = z.read("questions/INVESTIGATION.md").decode("utf-8")
-    assert len(re.findall(r"\[Q[0-9]{2}\]", questions)) == 30
+    assert len(re.findall(r"\bQ[0-9]{2}\s+[—-]", questions)) == 30
     for name in names:
         path = ROOT / name
         assert path.is_file(), f"Packaged source is not tracked: {name}"
