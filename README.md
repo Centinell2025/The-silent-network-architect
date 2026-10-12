@@ -13,6 +13,10 @@ Determine **who/what/when/where/how/why**, separate facts from hypotheses, and d
 - [Investigation Questions](questions/INVESTIGATION.md) -- 30 graduated challenges.
 - [Case Brief](docs/CASE_BRIEF.md) -- initial SOC handoff.
 - [Evidence Guide](docs/EVIDENCE_GUIDE.md) -- source descriptions, uncertainty and normalization.
+- [Network Architecture Diagram](docs/NETWORK_ARCHITECTURE.md) -- multi-host map and trust boundaries.
+- [Hosts, Services and Accounts](docs/HOSTS_SERVICES_AND_IDENTITIES.md) -- OS, processes and identities.
+- [CVE, PII/PCI and Evidence Provenance](docs/CVE_PII_AND_EVIDENCE_PROVENANCE.md) -- data-generation disclosures.
+- [HTB Author Readiness](docs/HTB_AUTHOR_READINESS.md) -- verified and outstanding submission gates.
 - [SHA-256 Checksums](manifest/SHA256SUMS.txt) -- hashes of every text evidence file and the archived payload.
 
 **Do not use GitHub's README alone as the challenge. Download and analyze the evidence.** No VM, offensive exploit, Internet access or real targets are required.
@@ -23,7 +27,7 @@ Determine **who/what/when/where/how/why**, separate facts from hypotheses, and d
 | Sherlock title | The Silent Network Architect |
 | Target category | DFIR / Network Forensics |
 | Target difficulty | Insane (aspirational, subject to HTB review) |
-| Investigation time | Suggested 4-7 hours (not benchmarked) |
+| Investigation time | Not benchmarked; difficulty subject to blind testing |
 | Scenario | Fully fabricated Northbridge Systems |
 | Evidence | Multi-source synthetic records, export payload, cryptographic manifest |
 | Grading | 24 precise-response questions + 6 investigative reasoning tasks |
@@ -48,3 +52,5 @@ downloads/       student-only ZIP, ready for review
 All companies, people, logs, IP addresses, domains and exported content are **synthetic**. External networks use RFC 5737 documentation IP space; DNS uses `.example`. The archive is harmless data, not a real stolen dataset. The repo deliberately contains **no instructor answer key**. Keep solutions in a controlled private reviewer channel.
 
 **Author portfolio:** Centinell Suite Defense / Beacon of the Eagle LLC. Northbridge Systems is a fictional training entity, not the author's actual business. Submission/acceptance and compensation are not guaranteed.
+
+**Review status (2026-10-12):** This is an advanced *candidate prototype*, not a validated Insane Sherlock. Native forensic artifacts, a private screenshot-backed walkthrough, and blind difficulty testing remain open requirements before submission.
