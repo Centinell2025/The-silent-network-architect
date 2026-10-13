@@ -35,6 +35,17 @@ On Windows PowerShell, replace `python3` with `py -3` if needed. This command-li
 ## Open tools only
 Python 3, a file viewer, Git, the operating-system ZIP utilities, and optionally jq/Wireshark on genuinely captured files. No Python package installation is required. The Zeek-format and other source tables are simulated telemetry, **not captures from actual devices**.
 
+## Optional expert packet-level investigation
+The archive includes a modeled PCAP for practicing actual packet inspection, and 12 supplementary tasks (PX01–PX12). Run:
+
+```bash
+python3 tools/generate_synthetic_pcap.py --check
+python3 tools/packet_inspector.py summary
+python3 tools/packet_inspector.py flows --limit 20
+```
+
+This is deterministic packet data **constructed offline**, not collected from live hosts. It does not establish real TLS contents or an independently acquired exfiltration. Read `docs/ADVANCED_PACKET_ANALYSIS.md` and complete `templates/ADVANCED_PACKET_WORKSHEET.md` if performing the extended track.
+
 ## Next reading
 - `docs/SCENARIO.md` — immersive handoff (spoiler-free)
 - `docs/SOLVER_PLAYBOOK.md` — stages and reproducible analysis methods

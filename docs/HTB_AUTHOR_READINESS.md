@@ -14,6 +14,7 @@ This public student project is a **Sherlock candidate**. It is not presented as 
 - [x] Offline student quick-start, workbench, report template and answer sheet
 - [x] Spoiler-free reviewer handoff, evidence limits and reproducible analysis steps
 - [x] Additional synthetic benign background and mixed-signal fixtures (not native captures)
+- [x] Reproducible synthetic PCAP-format packet fixture with offline protocol inspection and 12 expert exercises (not a native capture)
 - [ ] Genuine native log/capture artifacts with credible independently collected background
 - [x] Private instructor walkthrough with **30 executed terminal screenshots**, one per exact-answer prompt; reproducible from a separate confidential reviewer ZIP; not a native-VM collection
 - [ ] External blind-solve calibration at the requested Insane difficulty

@@ -31,6 +31,9 @@ Determine **who/what/when/where/how/why**, separate facts from hypotheses, and d
 - [Investigation Questions](questions/INVESTIGATION.md) -- 30 correlated exact-answer investigations.
 - [Canonical Grading Guide](docs/GRADER_HANDOFF.md) -- one set of 30 exact-answer questions and reviewer quality controls.
 - [Expert Correlation Review](questions/EXPERT_CORRELATION.md) -- 10 ungraded advanced evidence exercises.
+- [Advanced Packet Analysis](docs/ADVANCED_PACKET_ANALYSIS.md) -- 12 additional packet-level DFIR tasks using a **synthetic PCAP**, not a live capture.
+- [Examiner Quality Matrix](docs/EXAMINER_QUALITY_MATRIX.md) -- reproducibility, false positives, provenance and decision-quality scoring.
+- [Advanced Investigation Worksheet](templates/ADVANCED_PACKET_WORKSHEET.md) -- structured source-backed analyst deliverable.
 - [Case Brief](docs/CASE_BRIEF.md) -- initial SOC handoff.
 - [Evidence Guide](docs/EVIDENCE_GUIDE.md) -- source descriptions, uncertainty and normalization.
 - [Mixed-signal Provenance](docs/BACKGROUND_DATA_PROVENANCE.md) -- realistic-looking, explicitly synthetic background evidence.
@@ -53,6 +56,9 @@ Determine **who/what/when/where/how/why**, separate facts from hypotheses, and d
 | Scenario | Fully fabricated Northbridge Systems |
 | Evidence | Multi-source synthetic records, export payload, cryptographic manifest |
 | Grading | 30 exact-answer questions + expert report (ungraded) |
+
+## Packet-level practice (additional)
+The student package includes a deterministic, generated packet fixture with real PCAP headers and Ethernet/IPv4 protocol framing. It is *not* a native collection from a lab and does not contain an actual TLS session or file contents. Its purpose is to practice Wireshark or the bundled read-only Python parser and explicitly test source reliability. Try `python3 tools/packet_inspector.py summary`.
 
 ## Design features
 - Windows Security and process records, controller audit, switch SPAN counters, firewall/NTP telemetry, DNS, flow and proxy evidence, service-ticket policy, storage receipt, SIEM health and a file-export package.

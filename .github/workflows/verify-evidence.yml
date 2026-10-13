@@ -22,3 +22,7 @@ jobs:
         run: python3 tests/test_grading_handout.py
       - name: Guard repeatable student ZIP assembly
         run: python3 tools/build_student_zip.py --check
+      - name: Verify synthetic packet-level forensic fixture
+        run: python3 tests/test_packet_fixture.py
+      - name: Verify packet-level investigation CLI
+        run: python3 tools/packet_inspector.py summary

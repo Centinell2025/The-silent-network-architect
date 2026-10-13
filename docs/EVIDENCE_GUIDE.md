@@ -35,3 +35,6 @@ All evidence was generated for this exercise. Event IDs are synthetic scenario i
 
 ## Checksums
 Run `python3 tools/validate_evidence.py` at repository root. This uses only Python's standard library, checks checksums and verifies referential/event-level properties without revealing the instructor answers. For the binary export: compare its computed SHA-256 and byte length to both `09_export/export_catalog.csv` and the 07_receipts records.
+
+## Advanced packet fixture (optional)
+`evidence/11_packet_fixture/synthetic_network_fixture.pcap` contains deterministic, generated Ethernet/IPv4 TCP SYN/ACK exchanges and DNS examples, indexed by `CAPTURE_PROVENANCE.csv`. It is a **genuine PCAP-format file** but **not a live-captured PCAP**; do not claim it independently proves source-system events or application payload. Use `python3 tools/packet_inspector.py summary` and `docs/ADVANCED_PACKET_ANALYSIS.md` to compare modeled tuples, document coverage gaps and draw explicitly bounded conclusions. The SHA-256 is registered in `manifest/SHA256SUMS.txt`.
