@@ -54,3 +54,6 @@ This is deterministic packet data **constructed offline**, not collected from li
 - `docs/QUALITY_ACCEPTANCE_PLAN.md` — transparent author quality gates
 
 This candidate is not approved, sponsored or endorsed by Hack The Box. Target difficulty **Insane** remains unverified.
+
+## Track de 14 laboratorios
+Dentro del ZIP ejecuta `python3 labs/runner.py list` para ver los 14 ejercicios guiados y usa `python3 labs/runner.py start LAB-13 --output student_work` para generar una plantilla independiente de las evidencias. Revisa [labs/README.md](labs/README.md). El programa verifica las referencias, pero el profesor evalúa la calidad forense.

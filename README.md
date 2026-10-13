@@ -83,3 +83,6 @@ All companies, people, logs, IP addresses, domains and exported content are **sy
 **Author portfolio:** Centinell Suite Defense / Beacon of the Eagle LLC. Northbridge Systems is a fictional training entity, not the author's actual business. Submission/acceptance and compensation are not guaranteed.
 
 **Review status (2026-10-12):** This is an advanced *candidate prototype*, not a validated Insane Sherlock. A private 31-page screenshot-backed instructor walkthrough has been completed and independently replayed from its self-contained private package (30/30 checks). Native source artifacts and independent blind difficulty calibration remain open; HTB review/acceptance is pending.
+
+## Laboratorios prácticos — 14 casos / 42 ejercicios
+Se incorporaron [14 laboratorios DFIR/SOC](labs/README.md), con tres checkpoints por laboratorio, plantillas JSON y verificación offline de fuentes. Se mantienen las 30 preguntas originales del Sherlock. Los dos últimos son **LAB-13 (evidencias contradictorias)** y **LAB-14 (crisis SOC)**. Solo contienen escenarios defensivos ficticios; el verificador no revela respuestas. Ejecuta `python3 labs/runner.py list`.

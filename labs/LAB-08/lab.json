@@ -1,0 +1,32 @@
+{
+  "id": "LAB-08",
+  "title": "DNS, NetFlow y proxy",
+  "level": "Advanced",
+  "objective": "Construye una correlación defensiva sin confundir telemetría de salud y subida anómala.",
+  "checkpoints": [
+    {
+      "id": "LAB-08-C1",
+      "task": "Comprueba la relación entre resolución DNS y petición de aplicación.",
+      "sources": [
+        "evidence/05_network/dns_queries.csv",
+        "evidence/05_network/proxy_requests.csv"
+      ]
+    },
+    {
+      "id": "LAB-08-C2",
+      "task": "Une una conexión NetFlow a su petición según IP y tiempo.",
+      "sources": [
+        "evidence/05_network/netflow.csv",
+        "evidence/05_network/proxy_requests.csv"
+      ]
+    },
+    {
+      "id": "LAB-08-C3",
+      "task": "Diferencia los recibos de una transferencia rutinaria y una operación sospechosa.",
+      "sources": [
+        "evidence/05_network/proxy_requests.csv",
+        "evidence/07_receipts/receiving_object_audit.csv"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "LAB-03",
+  "title": "Identidad y puesto compartido",
+  "level": "Advanced",
+  "objective": "Reconstruye un acceso remoto privilegiado sin atribuir automáticamente una identidad humana.",
+  "checkpoints": [
+    {
+      "id": "LAB-03-C1",
+      "task": "Relaciona un inicio remoto con la sesión de acceso privilegiado.",
+      "sources": [
+        "evidence/03_identity/windows_security.csv",
+        "evidence/03_identity/privileged_access.csv"
+      ]
+    },
+    {
+      "id": "LAB-03-C2",
+      "task": "Relaciona la IP de origen con la asignación DHCP válida durante el incidente.",
+      "sources": [
+        "evidence/01_environment/dhcp_leases.csv",
+        "evidence/03_identity/windows_security.csv"
+      ]
+    },
+    {
+      "id": "LAB-03-C3",
+      "task": "Demuestra la diferencia entre una cuenta autorizada a operar y una sesión anómala.",
+      "sources": [
+        "evidence/02_governance/access_policy.csv",
+        "evidence/04_endpoint/process_activity.csv"
+      ]
+    }
+  ]
+}

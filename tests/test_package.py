@@ -26,6 +26,10 @@ REQUIRED = {
     "templates/ADVANCED_PACKET_WORKSHEET.md",
     "tools/packet_inspector.py",
     "tools/generate_synthetic_pcap.py",
+    "labs/README.md",
+    "labs/runner.py",
+    "labs/LAB-13/README.md",
+    "labs/LAB-14/README.md",
 }
 with zipfile.ZipFile(PACK) as z:
     names = z.namelist()

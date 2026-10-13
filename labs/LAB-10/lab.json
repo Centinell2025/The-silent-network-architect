@@ -1,0 +1,32 @@
+{
+  "id": "LAB-10",
+  "title": "Persistencia y restauración",
+  "level": "Expert",
+  "objective": "Evalúa si restaurar reglas de red basta para cerrar el incidente.",
+  "checkpoints": [
+    {
+      "id": "LAB-10-C1",
+      "task": "Reconstruye la creación y ejecución de una tarea programada.",
+      "sources": [
+        "evidence/04_endpoint/scheduled_tasks.csv",
+        "evidence/03_identity/windows_security.csv"
+      ]
+    },
+    {
+      "id": "LAB-10-C2",
+      "task": "Contrasta una tarea bajo SYSTEM con la evidencia de procesos.",
+      "sources": [
+        "evidence/04_endpoint/scheduled_tasks.csv",
+        "evidence/04_endpoint/process_activity.csv"
+      ]
+    },
+    {
+      "id": "LAB-10-C3",
+      "task": "Explica qué exposición continúa después de restaurar la configuración de red.",
+      "sources": [
+        "evidence/06_control_plane/config_snapshots.csv",
+        "evidence/04_endpoint/scheduled_tasks.csv"
+      ]
+    }
+  ]
+}

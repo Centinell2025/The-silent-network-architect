@@ -1,0 +1,32 @@
+{
+  "id": "LAB-09",
+  "title": "Análisis PCAP sintético",
+  "level": "Expert",
+  "objective": "Inspecciona las estructuras de los paquetes y evalúa qué hechos no pueden demostrarse.",
+  "checkpoints": [
+    {
+      "id": "LAB-09-C1",
+      "task": "Documenta metadatos de los paquetes e identifica claramente su origen sintético.",
+      "sources": [
+        "evidence/11_packet_fixture/synthetic_network_fixture.pcap",
+        "evidence/11_packet_fixture/CAPTURE_PROVENANCE.csv"
+      ]
+    },
+    {
+      "id": "LAB-09-C2",
+      "task": "Comprueba coincidencias y ausencias entre la captura sintética y NetFlow.",
+      "sources": [
+        "evidence/11_packet_fixture/CAPTURE_PROVENANCE.csv",
+        "evidence/05_network/netflow.csv"
+      ]
+    },
+    {
+      "id": "LAB-09-C3",
+      "task": "Contrasta representación Zeek y paquetes modelados sin fingir dos adquisiciones independientes.",
+      "sources": [
+        "evidence/11_packet_fixture/CAPTURE_PROVENANCE.csv",
+        "evidence/10_background/zeek_conn.log"
+      ]
+    }
+  ]
+}

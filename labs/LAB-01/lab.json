@@ -1,0 +1,32 @@
+{
+  "id": "LAB-01",
+  "title": "Integridad y cadena de custodia",
+  "level": "Foundations",
+  "objective": "Demuestra la integridad de los objetos sin confundir un hash con la autenticidad de su origen.",
+  "checkpoints": [
+    {
+      "id": "LAB-01-C1",
+      "task": "Comprueba el hash del archivo exportado frente a su catálogo y explica qué valida realmente.",
+      "sources": [
+        "evidence/09_export/export_catalog.csv",
+        "evidence/09_export/network-audit-bundle.zip"
+      ]
+    },
+    {
+      "id": "LAB-01-C2",
+      "task": "Evalúa la diferencia entre los hashes del manifiesto y la atestación externa del recibo.",
+      "sources": [
+        "evidence/07_receipts/receiving_object_audit.csv",
+        "evidence/09_export/export_catalog.csv"
+      ]
+    },
+    {
+      "id": "LAB-01-C3",
+      "task": "Determina las principales limitaciones de atribución al consultar alertas y registros de identidades.",
+      "sources": [
+        "evidence/00_intake/soc_alerts.csv",
+        "evidence/03_identity/windows_security.csv"
+      ]
+    }
+  ]
+}

@@ -14,7 +14,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "downloads" / "The-Silent-Network-Architect-Student.zip"
-PUBLIC_ROOTS = ("docs", "evidence", "questions", "templates", "manifest")
+PUBLIC_ROOTS = ("docs", "evidence", "questions", "templates", "manifest", "labs")
 PUBLIC_SINGLES = ("README.md", "START_HERE.md", "BEACON-OWNERSHIP.md",
                   "tools/validate_evidence.py", "tools/workbench.py",
                   "tools/generate_synthetic_pcap.py", "tools/packet_inspector.py")

@@ -1,0 +1,32 @@
+{
+  "id": "LAB-12",
+  "title": "Informe ejecutivo de respuesta",
+  "level": "Expert",
+  "objective": "Redacta una decisión operativa que distinga hechos, hipótesis y acciones reversibles.",
+  "checkpoints": [
+    {
+      "id": "LAB-12-C1",
+      "task": "Separa hechos confirmados y dudas sobre el corte de visibilidad.",
+      "sources": [
+        "evidence/06_control_plane/controller_audit.csv",
+        "evidence/08_soc/siem_health.csv"
+      ]
+    },
+    {
+      "id": "LAB-12-C2",
+      "task": "Ordena acciones de preservación y contención según riesgo de perder evidencias.",
+      "sources": [
+        "evidence/04_endpoint/scheduled_tasks.csv",
+        "evidence/03_identity/windows_security.csv"
+      ]
+    },
+    {
+      "id": "LAB-12-C3",
+      "task": "Evalúa las afirmaciones defendibles sobre exportación y destino.",
+      "sources": [
+        "evidence/09_export/export_catalog.csv",
+        "evidence/07_receipts/receiving_object_audit.csv"
+      ]
+    }
+  ]
+}

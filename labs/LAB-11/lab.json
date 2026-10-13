@@ -1,0 +1,32 @@
+{
+  "id": "LAB-11",
+  "title": "Reglas SOC y falsos positivos",
+  "level": "Expert",
+  "objective": "Diseña detecciones basadas en comportamientos correlacionados y un triage proporcional.",
+  "checkpoints": [
+    {
+      "id": "LAB-11-C1",
+      "task": "Propón una alerta que detecte acción fuera del alcance de un ticket.",
+      "sources": [
+        "evidence/02_governance/change_tickets.csv",
+        "evidence/06_control_plane/controller_audit.csv"
+      ]
+    },
+    {
+      "id": "LAB-11-C2",
+      "task": "Propón una alerta por pérdida de tráfico aunque el heartbeat sea verde.",
+      "sources": [
+        "evidence/05_network/span_counters.csv",
+        "evidence/08_soc/siem_health.csv"
+      ]
+    },
+    {
+      "id": "LAB-11-C3",
+      "task": "Propón una heurística para distinguir una subida normal de una anómala.",
+      "sources": [
+        "evidence/05_network/netflow.csv",
+        "evidence/05_network/proxy_requests.csv"
+      ]
+    }
+  ]
+}

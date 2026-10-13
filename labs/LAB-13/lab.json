@@ -1,0 +1,32 @@
+{
+  "id": "LAB-13",
+  "title": "Reconstrucción con indicios contradictorios",
+  "level": "Expert+",
+  "objective": "Emite una conclusión cuando los registros temporales, controles de acceso y supervisión parecen discrepar.",
+  "checkpoints": [
+    {
+      "id": "LAB-13-C1",
+      "task": "Compara dos relojes y explica cómo un error de normalización altera el relato.",
+      "sources": [
+        "evidence/05_network/acl_policy_log.csv",
+        "evidence/06_control_plane/ntp_samples.csv"
+      ]
+    },
+    {
+      "id": "LAB-13-C2",
+      "task": "Diferencia restablecimiento aparente y pérdida real de monitorización usando fuentes diferentes.",
+      "sources": [
+        "evidence/05_network/span_counters.csv",
+        "evidence/08_soc/siem_health.csv"
+      ]
+    },
+    {
+      "id": "LAB-13-C3",
+      "task": "Contrasta la aprobación documentada con el efecto final del cambio de control.",
+      "sources": [
+        "evidence/02_governance/change_tickets.csv",
+        "evidence/06_control_plane/config_snapshots.csv"
+      ]
+    }
+  ]
+}

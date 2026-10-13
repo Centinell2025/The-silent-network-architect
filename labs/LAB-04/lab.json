@@ -1,0 +1,32 @@
+{
+  "id": "LAB-04",
+  "title": "Dos relojes y una cronología",
+  "level": "Advanced",
+  "objective": "Normaliza tiempos de dispositivos antes de comparar eventos que parecen contradictorios.",
+  "checkpoints": [
+    {
+      "id": "LAB-04-C1",
+      "task": "Calcula la equivalencia UTC de un evento local de firewall y declara la incertidumbre.",
+      "sources": [
+        "evidence/05_network/acl_policy_log.csv",
+        "evidence/06_control_plane/ntp_samples.csv"
+      ]
+    },
+    {
+      "id": "LAB-04-C2",
+      "task": "Explica cualquier discrepancia temporal entre el firewall y el controlador.",
+      "sources": [
+        "evidence/05_network/acl_policy_log.csv",
+        "evidence/06_control_plane/controller_audit.csv"
+      ]
+    },
+    {
+      "id": "LAB-04-C3",
+      "task": "Evalúa si una conexión de NetFlow coincide después de aplicar la corrección del reloj.",
+      "sources": [
+        "evidence/06_control_plane/ntp_samples.csv",
+        "evidence/05_network/netflow.csv"
+      ]
+    }
+  ]
+}

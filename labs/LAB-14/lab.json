@@ -1,0 +1,32 @@
+{
+  "id": "LAB-14",
+  "title": "Simulacro de crisis SOC y comunicación",
+  "level": "Expert+",
+  "objective": "Coordina una respuesta blue-team con decisiones justificadas sin atribuir un actor inexistente.",
+  "checkpoints": [
+    {
+      "id": "LAB-14-C1",
+      "task": "Determina cuándo escalar una alerta con información incompleta.",
+      "sources": [
+        "evidence/00_intake/soc_alerts.csv",
+        "evidence/03_identity/privileged_access.csv"
+      ]
+    },
+    {
+      "id": "LAB-14-C2",
+      "task": "Propón un plan de preservación de accesos, tareas y eventos volátiles.",
+      "sources": [
+        "evidence/04_endpoint/scheduled_tasks.csv",
+        "evidence/03_identity/windows_security.csv"
+      ]
+    },
+    {
+      "id": "LAB-14-C3",
+      "task": "Prepara una recomendación de recuperación que no destruya las huellas de la exportación.",
+      "sources": [
+        "evidence/07_receipts/receiving_object_audit.csv",
+        "evidence/06_control_plane/config_snapshots.csv"
+      ]
+    }
+  ]
+}

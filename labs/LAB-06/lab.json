@@ -1,0 +1,32 @@
+{
+  "id": "LAB-06",
+  "title": "Procesos y salto privilegiado",
+  "level": "Advanced",
+  "objective": "Reconstruye una cadena de procesos y eventos desde el acceso remoto al empaquetado.",
+  "checkpoints": [
+    {
+      "id": "LAB-06-C1",
+      "task": "Relaciona inicio de sesión con procesos ejecutados en el jump host.",
+      "sources": [
+        "evidence/03_identity/windows_security.csv",
+        "evidence/04_endpoint/process_activity.csv"
+      ]
+    },
+    {
+      "id": "LAB-06-C2",
+      "task": "Distingue los procesos relevantes de actividad normal de fondo.",
+      "sources": [
+        "evidence/04_endpoint/process_activity.csv",
+        "evidence/10_background/endpoint_activity.csv"
+      ]
+    },
+    {
+      "id": "LAB-06-C3",
+      "task": "Relaciona lectura de archivos y empaquetado sin afirmar ejecución de malware no demostrado.",
+      "sources": [
+        "evidence/04_endpoint/file_audit.csv",
+        "evidence/04_endpoint/process_activity.csv"
+      ]
+    }
+  ]
+}

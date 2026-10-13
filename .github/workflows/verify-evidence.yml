@@ -26,3 +26,5 @@ jobs:
         run: python3 tests/test_packet_fixture.py
       - name: Verify packet-level investigation CLI
         run: python3 tools/packet_inspector.py summary
+      - name: Check all 14 executable lab manifests
+        run: python3 tests/test_labs.py

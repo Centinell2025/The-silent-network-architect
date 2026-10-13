@@ -1,0 +1,32 @@
+{
+  "id": "LAB-02",
+  "title": "Cambios de red bajo sospecha",
+  "level": "Intermediate",
+  "objective": "Determina si el cambio de red respetó el activo, la acción y el alcance de una autorización.",
+  "checkpoints": [
+    {
+      "id": "LAB-02-C1",
+      "task": "Confronta el alcance autorizado del ticket con las operaciones registradas por el controlador.",
+      "sources": [
+        "evidence/02_governance/change_tickets.csv",
+        "evidence/06_control_plane/controller_audit.csv"
+      ]
+    },
+    {
+      "id": "LAB-02-C2",
+      "task": "Evalúa la cuenta de servicio involucrada frente a su política de acceso.",
+      "sources": [
+        "evidence/02_governance/access_policy.csv",
+        "evidence/03_identity/privileged_access.csv"
+      ]
+    },
+    {
+      "id": "LAB-02-C3",
+      "task": "Distingue la actividad de mantenimiento genuina de los cambios posteriores.",
+      "sources": [
+        "evidence/02_governance/maintenance_attestation.csv",
+        "evidence/04_endpoint/process_activity.csv"
+      ]
+    }
+  ]
+}

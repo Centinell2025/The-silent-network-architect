@@ -1,0 +1,32 @@
+{
+  "id": "LAB-07",
+  "title": "Integridad de la exportación",
+  "level": "Advanced",
+  "objective": "Comprueba el contenido real del ZIP y separa sus bytes del tráfico sobre la red.",
+  "checkpoints": [
+    {
+      "id": "LAB-07-C1",
+      "task": "Contrasta acceso a archivos protegidos con el catálogo de la exportación.",
+      "sources": [
+        "evidence/04_endpoint/file_audit.csv",
+        "evidence/09_export/export_catalog.csv"
+      ]
+    },
+    {
+      "id": "LAB-07-C2",
+      "task": "Compara tamaño y digest del archivo con el recibo registrado.",
+      "sources": [
+        "evidence/09_export/export_catalog.csv",
+        "evidence/07_receipts/receiving_object_audit.csv"
+      ]
+    },
+    {
+      "id": "LAB-07-C3",
+      "task": "Explica por qué NetFlow no contiene por sí mismo el contenido transferido.",
+      "sources": [
+        "evidence/05_network/netflow.csv",
+        "evidence/05_network/proxy_requests.csv"
+      ]
+    }
+  ]
+}

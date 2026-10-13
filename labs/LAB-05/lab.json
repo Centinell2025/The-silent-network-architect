@@ -1,0 +1,32 @@
+{
+  "id": "LAB-05",
+  "title": "Monitoreo en verde, sensor ciego",
+  "level": "Advanced",
+  "objective": "Diferencia disponibilidad del agente, tráfico realmente ingerido y cambios de SPAN.",
+  "checkpoints": [
+    {
+      "id": "LAB-05-C1",
+      "task": "Delimita el período de interrupción de captura con evidencias del switch y controlador.",
+      "sources": [
+        "evidence/05_network/span_counters.csv",
+        "evidence/06_control_plane/controller_audit.csv"
+      ]
+    },
+    {
+      "id": "LAB-05-C2",
+      "task": "Explica por qué un agente activo no acredita la recepción de paquetes.",
+      "sources": [
+        "evidence/08_soc/siem_health.csv",
+        "evidence/05_network/span_counters.csv"
+      ]
+    },
+    {
+      "id": "LAB-05-C3",
+      "task": "Investiga si el retraso de una alerta cambia la hora de inicio de la anomalía.",
+      "sources": [
+        "evidence/00_intake/soc_alerts.csv",
+        "evidence/05_network/span_counters.csv"
+      ]
+    }
+  ]
+}
