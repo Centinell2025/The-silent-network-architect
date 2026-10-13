@@ -41,7 +41,7 @@ with zipfile.ZipFile(PACK) as z:
     assert published.startswith(BEACON_GITHUB_HEADER), "GitHub publisher logo missing"
     assert same_student_content("README.md", original, published)
     assert not same_student_content("README.md", original, published + b"UNVERIFIED-EXTRA-TEXT")
-    assert not same_student_content("questions/INVESTIGATION.md", original, published)
+    assert not same_student_content("questions/INVESTIGATION.md", questions.encode("utf-8"), BEACON_GITHUB_HEADER + questions.encode("utf-8"))
     with zipfile.ZipFile(z.open("evidence/09_export/network-audit-bundle.zip")) as inner:
         assert inner.testzip() is None
         assert len(inner.namelist()) == 2
