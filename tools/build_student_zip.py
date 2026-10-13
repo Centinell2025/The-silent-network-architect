@@ -33,6 +33,19 @@ def expected() -> dict[str, bytes]:
             raise ValueError(f"Potentially confidential source in student archive: {path}")
     return dict(sorted(files.items()))
 
+# README.md has a publisher-only visual header on GitHub. The already
+# released student ZIP predates that header. Accept this *exact* HTML prefix
+# only; all underlying case instructions and all other ZIP members must remain
+# byte-for-byte identical to the repository.
+BEACON_GITHUB_HEADER = "<div align=\"center\">\n  <img src=\"https://raw.githubusercontent.com/Centinell2025/the-last-evidence-standing/main/branding/BEACON_SEAL.png\" alt=\"Beacon of the Eagle LLC — logotipo corporativo\" width=\"165\" />\n  <p><strong>BEACON OF THE EAGLE LLC</strong><br/><strong>CENTINELL SUITE DEFENSE</strong></p>\n</div>\n\n".encode("utf-8")
+
+def same_student_content(name: str, packaged: bytes, repository: bytes) -> bool:
+    if packaged == repository:
+        return True
+    return (name == "README.md"
+            and repository.startswith(BEACON_GITHUB_HEADER)
+            and packaged == repository[len(BEACON_GITHUB_HEADER):])
+
 def check(files: dict[str, bytes]) -> None:
     with zipfile.ZipFile(OUTPUT, "r") as z:
         actual = z.namelist()
@@ -45,9 +58,9 @@ def check(files: dict[str, bytes]) -> None:
         if z.testzip() is not None:
             raise ValueError("CRC failure in student ZIP")
         for name, content in files.items():
-            if hashlib.sha256(z.read(name)).digest() != hashlib.sha256(content).digest():
+            if not same_student_content(name, z.read(name), content):
                 raise ValueError(f"Byte mismatch for {name}")
-    print(f"PASS: {len(files)} student ZIP members, CRC and exact repository parity")
+    print(f"PASS: {len(files)} student ZIP members and CRC; exact parity except strict GitHub-only Beacon logo prefix")
 
 def build(files: dict[str, bytes]) -> None:
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
