@@ -1,0 +1,33 @@
+name: Complete advanced student package
+on:
+  push:
+    paths:
+      - '.github/workflows/package-advanced-tools.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  final-package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rebuild student archive including offline packet tools
+        run: python3 tools/build_student_zip.py --write
+      - name: Verify contents, forensic joins, PCAP and checksum metadata
+        run: |
+          python3 tools/validate_evidence.py
+          python3 tests/test_package.py
+          python3 tests/test_case_logic.py
+          python3 tests/test_workbench.py
+          python3 tests/test_grading_handout.py
+          python3 tests/test_packet_fixture.py
+          python3 tools/build_student_zip.py --check
+      - name: Publish rebuilt student ZIP
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add downloads/The-Silent-Network-Architect-Student.zip
+          if ! git diff --cached --quiet; then
+            git commit -m "Deliver student archive with offline synthetic packet inspection tools"
+            git push origin HEAD:main
+          fi

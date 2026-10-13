@@ -19,6 +19,13 @@ REQUIRED = {
     "questions/INVESTIGATION.md",
     "manifest/SHA256SUMS.txt",
     "evidence/09_export/network-audit-bundle.zip",
+    "evidence/11_packet_fixture/synthetic_network_fixture.pcap",
+    "evidence/11_packet_fixture/CAPTURE_PROVENANCE.csv",
+    "docs/ADVANCED_PACKET_ANALYSIS.md",
+    "docs/EXAMINER_QUALITY_MATRIX.md",
+    "templates/ADVANCED_PACKET_WORKSHEET.md",
+    "tools/packet_inspector.py",
+    "tools/generate_synthetic_pcap.py",
 }
 with zipfile.ZipFile(PACK) as z:
     names = z.namelist()
