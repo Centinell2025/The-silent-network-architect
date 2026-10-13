@@ -10,7 +10,7 @@
 ## What is not yet demonstrated
 - An investigation performed by an unaffiliated analyst without receiving the answer key.
 - Native multi-OS Windows EVTX/Sysmon, Linux auth, packet captures, or disk/memory forensic artifacts captured from an actual controlled lab.
-- An HTB-compliant **private write-up with real analysis screenshots for each of the 30 questions**.
+- HTB **acceptance** of the confidential write-up and 30 executed-case screenshots, which are now produced. Independent verification of their grading adequacy remains pending.
 - Confirmed grading acceptance for six narrative questions (Q25-Q30).
 - Measured experienced-solver time, false-positive rate, or platform acceptance.
 

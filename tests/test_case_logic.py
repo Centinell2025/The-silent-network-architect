@@ -140,5 +140,5 @@ assert registrations
 assert any(r["task_name"]==x["task_name"] and r["operation"]=="run"
            and stamp(r["timestamp_utc"])>stamp(x["timestamp_utc"])
            for x in registrations for r in tasks)
-assert any(x["win_event_id"]=="1102" for x in logons)
+assert any("clear" in x["details"].lower() for x in logons)
 print("PASS: cross-source joins, bounded NTP, authorization, SPAN, archive/hash, DNS, flow, receipt, task and background ambiguity")

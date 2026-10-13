@@ -10,7 +10,7 @@
 - [x] Real sample export ZIP verified (1,133 bytes) with matching SHA-256.
 - [x] All 30 intended answers recomputed by executing controlled analysis over the verified case data.
 - [x] Thirty actual X11 terminal screenshots captured of those analysis results, one per question.
-- [x] A **private** 31-page instructor PDF, full solution Markdown, 30 screenshots, exact answer CSV and runnable local reproduction archived **outside this public repository**.
+- [x] A **private** 31-page instructor PDF, full solution Markdown, 30 screenshots, exact answer CSV and replay script archived **outside this public repository**; reviewer ZIP v3 successfully replayed 30/30 directly from extracted package paths with no author-workspace dependency.
 - [x] Current GitHub Actions integrity, package and non-spoiler case tests passed in prior checked commit.
 
 ## Limits and outstanding external gates

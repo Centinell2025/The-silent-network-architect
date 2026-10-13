@@ -15,7 +15,7 @@ This public student project is a **Sherlock candidate**. It is not presented as 
 - [x] Spoiler-free reviewer handoff, evidence limits and reproducible analysis steps
 - [x] Additional synthetic benign background and mixed-signal fixtures (not native captures)
 - [ ] Genuine native log/capture artifacts with credible independently collected background
-- [ ] Full **private** instructor walkthrough with **screenshots demonstrating each answer**
+- [x] Private instructor walkthrough with **30 executed terminal screenshots**, one per exact-answer prompt; reproducible from a separate confidential reviewer ZIP; not a native-VM collection
 - [ ] External blind-solve calibration at the requested Insane difficulty
 - [x] Consolidated 30 canonical exact-answer questions with multi-source reasoning
 - [ ] HTB examiner confirmation of canonical grading for all 30 exact-answer prompts

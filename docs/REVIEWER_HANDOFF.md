@@ -22,7 +22,7 @@
 | Answers worksheet and analyst report | `templates/` | Student and reviewer |
 | Integrity manifest | `manifest/SHA256SUMS.txt` | Student and reviewer |
 | Automated evidence and question checks | `tests/` | Repository author / QA |
-| Final instructor solution with **real screenshots** | Separately supplied by author | **Not yet completed** |
+| Private instructor solution with 30 executed-case screenshots | Delivered separately by author | **Completed privately; not present in this public repository** |
 
 ## Scope and integrity disclosures
 All logs are *modeled synthetic telemetry*. The Zeek-format traffic is **not** a PCAP and the Windows-like table is **not** EVTX. Embedded external address space and domains are reserved for documentation. No malware, 8GB memory image, E01 disk evidence, real people or third-party licensed materials are included. This package uses only standard free analysis tools. No claim is made that HTB has reviewed or agreed to compensate the author.
@@ -35,7 +35,7 @@ All logs are *modeled synthetic telemetry*. The Zeek-format traffic is **not** a
 - The student ZIP should open successfully and match repository evidence exactly.
 
 ## Honest open issues before official submission
-HTB requires a **full intended investigation write-up with screenshots showing how to answer every question**; that deliverable still needs to be produced from actual analysis and privately delivered. To justify Insane, build more genuine multi-OS source artifacts and run independent blind solves; more synthetic noise alone is insufficient. All 30 questions are now exact-value prompts, but their difficulty and deterministic solutions require independent examiner verification.
+The private instructor write-up now includes 30 executed terminal screenshots and a replay script whose expected outputs have been checked from a self-contained confidential archive. These are executions against **simulated case exhibits**, not native captures from Windows/Linux VMs. To justify Insane, obtain realistic native artifacts where useful and perform independent blind solves; more synthetic noise alone is insufficient. All 30 questions are now exact-value prompts, but their difficulty and deterministic solutions require independent examiner verification.
 
 Official requirements: https://help.hackthebox.com/en/articles/8463668-sherlocks-submission-requirements
 

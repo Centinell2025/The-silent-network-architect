@@ -76,4 +76,4 @@ All companies, people, logs, IP addresses, domains and exported content are **sy
 
 **Author portfolio:** Centinell Suite Defense / Beacon of the Eagle LLC. Northbridge Systems is a fictional training entity, not the author's actual business. Submission/acceptance and compensation are not guaranteed.
 
-**Review status (2026-10-12):** This is an advanced *candidate prototype*, not a validated Insane Sherlock. Native forensic artifacts, a private screenshot-backed walkthrough, and blind difficulty testing remain open requirements before submission.
+**Review status (2026-10-12):** This is an advanced *candidate prototype*, not a validated Insane Sherlock. A private 31-page screenshot-backed instructor walkthrough has been completed and independently replayed from its self-contained private package (30/30 checks). Native source artifacts and independent blind difficulty calibration remain open; HTB review/acceptance is pending.
